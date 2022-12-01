@@ -12,6 +12,8 @@ const collection = [
         "Oliver Reed",
       ],
       trailer: "https://youtu.be/P5ieIbInFpg",
+      wiki:"https://fr.wikipedia.org/wiki/Gladiator_(film,_2000)",
+      plot:"A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery."
     },
 
     {
@@ -27,6 +29,8 @@ const collection = [
       "Zendaya",
     ],
     trailer: "https://youtu.be/rk-dF1lIbIg",
+    wiki:"https://fr.wikipedia.org/wiki/Spider-Man:_Homecoming",
+    plot:"Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City."
     },
     
     {
@@ -42,6 +46,8 @@ const collection = [
       "Robbie Coltrane",
     ],
     trailer: "https://youtu.be/P1BGgqhVGAI",
+    wiki:"https://fr.wikipedia.org/wiki/Harry_Potter_%C3%A0_l%27%C3%A9cole_des_sorciers_(film)",
+    plot:"An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world."
     },
 
     {
@@ -57,6 +63,8 @@ const collection = [
       "Melissa Benoist",
     ],
     trailer: "https://youtu.be/7d_jQycdQGo",
+    wiki:"https://fr.wikipedia.org/wiki/Whiplash_(film,_2014)",
+    plot:"A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential."
     },
 
     {
@@ -70,6 +78,8 @@ const collection = [
       "Scarlett Johansson",
     ],
     trailer: "https://youtu.be/W6iVPCRflQM",
+    wiki:"https://fr.wikipedia.org/wiki/Lost_in_Translation",
+    plot:"A faded movie star and a neglected young woman form an unlikely bond after crossing paths in Tokyo."
 
     },
 
@@ -87,6 +97,8 @@ const collection = [
       "Mark Ruffalo",
     ],
     trailer: "https://youtu.be/07-QBnEkgXU",
+    wiki:"https://fr.wikipedia.org/wiki/Eternal_Sunshine_of_the_Spotless_Mind",
+    plot:"When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories for ever."
     },
 
     {
@@ -102,6 +114,8 @@ const collection = [
       "Bunta Sugawara",
     ],
     trailer: "https://youtu.be/EhIZrZQoHuA",
+    wiki:"https://fr.wikipedia.org/wiki/Le_Voyage_de_Chihiro",
+    plot:"During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts."
     },
  
     {
@@ -117,6 +131,8 @@ const collection = [
         "Yoshimi Kondou",
     ],
     trailer: "https://youtu.be/wdM7athAem0",
+    wiki:"https://fr.wikipedia.org/wiki/5_Centim%C3%A8tres_par_seconde",
+    plot:"Told in three interconnected segments, we follow a young man named Takaki through his life as cruel winters, cold technology, and finally, adult obligations and responsibility converge to test the delicate petals of love."
       },
 
       {
@@ -132,6 +148,8 @@ const collection = [
         "Forest Whitaker",
       ],
       trailer: "https://youtu.be/frdj1zb9sMY",
+      wiki:"https://fr.wikipedia.org/wiki/Rogue_One:_A_Star_Wars_Story",
+      plot:"In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire's ultimate weapon of destruction."
       },
 
       {
@@ -147,6 +165,8 @@ const collection = [
         "Kad Merad",
       ],
       trailer: "https://youtu.be/qhYtVMoWFNQ",
+      wiki:"https://fr.wikipedia.org/wiki/Les_Choristes_(film)",
+      plot:"The new teacher at a severely administered boys' boarding school works to positively affect the students' lives through music."
         },
   
   ];
@@ -156,12 +176,14 @@ for (let elem of collection) {
   carte.className="carte"
   //image
   let image=document.createElement("img")
+  image.className="carte__img"
   image.src=elem["picture"]
   carte.appendChild(image)
 
   //genre+date
   let list=document.createElement("ul")
   list.className="carte__genre"
+  list.className="carte__list"
   carte.appendChild(list)
   for (let k of elem["genre"]){
     let item=document.createElement("li")
@@ -177,11 +199,13 @@ for (let elem of collection) {
   //titre
   let titre=document.createElement("h2")
   titre.textContent=elem["name"]
+  titre.className="carte__titre"
   carte.appendChild(titre)
 
   //auhtor
   let author=document.createElement("h3")
   author.textContent=elem["director"]
+  author.className="carte__author"
   carte.appendChild(author)
 
   //footer
@@ -196,6 +220,7 @@ for (let elem of collection) {
   let link_icon1=document.createElement("a")
   let link_icon2=document.createElement("a")
   link_icon1.href=elem["trailer"]
+  link_icon2.href=elem["wiki"]
   item_icon1.appendChild(link_icon1)
   item_icon2.appendChild(link_icon2)
   let img_icon1=document.createElement("img")
@@ -203,6 +228,8 @@ for (let elem of collection) {
   link_icon1.appendChild(img_icon1)
   link_icon2.appendChild(img_icon2)
   img_icon1.src="assets/youtube.png"
+  img_icon2.src="assets/wikipedia.png"
+  img_icon2.className="card__list_icon--wiki"
   carte.appendChild(list_icon)
 
 
