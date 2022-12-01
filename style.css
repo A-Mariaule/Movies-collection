@@ -1,1 +1,16 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  margin: 0 auto;
+  background-color: #EEEEEE;
+}
+
+main .container {
+  background-color: white;
+  width: 90%;
+  margin: auto;
+}
+main .container div img {
+  width: 100%;
+}
+main .container div ul {
+  list-style-type: none;
+}/*# sourceMappingURL=style.css.map */
