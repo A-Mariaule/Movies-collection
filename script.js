@@ -253,6 +253,9 @@ for (let elem of collection) {
   let link_icon1=document.createElement("a")
   let link_icon2=document.createElement("a")
   let link_icon3=document.createElement("a")
+  link_icon1.setAttribute('target', '_blank');
+  link_icon2.setAttribute('target', '_blank');
+  link_icon3.setAttribute('target', '_blank');
   link_icon1.href=elem["trailer"]
   link_icon2.href=elem["wiki"]
   link_icon3.href=elem["critic"]

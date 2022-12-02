@@ -1,12 +1,8 @@
-body{
-    margin: 0;
-    background-color:  #0e0e10;
-
-}
 
 @font-face {
     font-family: Roboto;
     src: url(fonts/Roboto/Roboto-Regular.ttf);
+    
   }
 
   @font-face {
@@ -29,6 +25,12 @@ body{
     from {opacity: 1;}
     to {opacity: 0.3;}
   }
+
+body{
+    margin: 0;
+    background-color:  #0e0e10;
+
+}
 
 main{
     h1{
