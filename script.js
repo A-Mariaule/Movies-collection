@@ -13,7 +13,9 @@ const collection = [
       ],
       trailer: "https://youtu.be/P5ieIbInFpg",
       wiki:"https://fr.wikipedia.org/wiki/Gladiator_(film,_2000)",
-      plot:"A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery."
+      plot:"A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+      critic:"https://www.rottentomatoes.com/m/gladiator",
+
     },
 
     {
@@ -30,7 +32,8 @@ const collection = [
     ],
     trailer: "https://youtu.be/rk-dF1lIbIg",
     wiki:"https://fr.wikipedia.org/wiki/Spider-Man:_Homecoming",
-    plot:"Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City."
+    plot:"Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City.",
+    critic:"https://www.rottentomatoes.com/m/spider_man_homecoming",
     },
     
     {
@@ -47,7 +50,8 @@ const collection = [
     ],
     trailer: "https://youtu.be/P1BGgqhVGAI",
     wiki:"https://fr.wikipedia.org/wiki/Harry_Potter_%C3%A0_l%27%C3%A9cole_des_sorciers_(film)",
-    plot:"An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world."
+    plot:"An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.",
+    critic:"https://www.rottentomatoes.com/m/harry_potter_and_the_sorcerers_stone",
     },
 
     {
@@ -64,7 +68,8 @@ const collection = [
     ],
     trailer: "https://youtu.be/7d_jQycdQGo",
     wiki:"https://fr.wikipedia.org/wiki/Whiplash_(film,_2014)",
-    plot:"A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential."
+    plot:"A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.",
+    critic:"https://www.rottentomatoes.com/m/whiplash_2014"
     },
 
     {
@@ -79,7 +84,8 @@ const collection = [
     ],
     trailer: "https://youtu.be/W6iVPCRflQM",
     wiki:"https://fr.wikipedia.org/wiki/Lost_in_Translation",
-    plot:"A faded movie star and a neglected young woman form an unlikely bond after crossing paths in Tokyo."
+    plot:"A faded movie star and a neglected young woman form an unlikely bond after crossing paths in Tokyo.",
+    critic:"https://www.rottentomatoes.com/m/lost_in_translation"
 
     },
 
@@ -89,7 +95,7 @@ const collection = [
     director: "	Michel Gondry",
     releaseYear:"2004" ,
     picture: "assets/Eternal.jpg",
-    genre: ["Drame","Romance","Science-fiction"],
+    genre: ["Drame","Romance"],
     cast: [
       "Jim Carrey",
       "Kate Winslet",
@@ -98,7 +104,8 @@ const collection = [
     ],
     trailer: "https://youtu.be/07-QBnEkgXU",
     wiki:"https://fr.wikipedia.org/wiki/Eternal_Sunshine_of_the_Spotless_Mind",
-    plot:"When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories for ever."
+    plot:"When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories for ever.",
+    critic:"https://www.rottentomatoes.com/m/eternal_sunshine_of_the_spotless_mind"
     },
 
     {
@@ -115,7 +122,8 @@ const collection = [
     ],
     trailer: "https://youtu.be/EhIZrZQoHuA",
     wiki:"https://fr.wikipedia.org/wiki/Le_Voyage_de_Chihiro",
-    plot:"During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts."
+    plot:"During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
+    critic:"https://www.rottentomatoes.com/m/spirited_away"
     },
  
     {
@@ -132,7 +140,8 @@ const collection = [
     ],
     trailer: "https://youtu.be/wdM7athAem0",
     wiki:"https://fr.wikipedia.org/wiki/5_Centim%C3%A8tres_par_seconde",
-    plot:"Told in three interconnected segments, we follow a young man named Takaki through his life as cruel winters, cold technology, and finally, adult obligations and responsibility converge to test the delicate petals of love."
+    plot:"Told in three interconnected segments, we follow a young man named Takaki through his life as cruel winters, cold technology, and finally, adult obligations and responsibility converge to test the delicate petals of love.",
+    critic:"https://www.rottentomatoes.com/m/5_centimeters_per_second"
       },
 
       {
@@ -149,7 +158,8 @@ const collection = [
       ],
       trailer: "https://youtu.be/frdj1zb9sMY",
       wiki:"https://fr.wikipedia.org/wiki/Rogue_One:_A_Star_Wars_Story",
-      plot:"In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire's ultimate weapon of destruction."
+      plot:"In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire's ultimate weapon of destruction.",
+      critic:"https://www.rottentomatoes.com/m/rogue_one_a_star_wars_story"
       },
 
       {
@@ -166,7 +176,8 @@ const collection = [
       ],
       trailer: "https://youtu.be/qhYtVMoWFNQ",
       wiki:"https://fr.wikipedia.org/wiki/Les_Choristes_(film)",
-      plot:"The new teacher at a severely administered boys' boarding school works to positively affect the students' lives through music."
+      plot:"The new teacher at a severely administered boys' boarding school works to positively affect the students' lives through music.",
+      critic:"https://www.rottentomatoes.com/m/chorus_les_choristes"
         },
   
   ];
@@ -182,16 +193,17 @@ for (let elem of collection) {
 
   //genre+date
   let list=document.createElement("ul")
-  list.className="carte__genre"
   list.className="carte__list"
   carte.appendChild(list)
   for (let k of elem["genre"]){
     let item=document.createElement("li")
     item.textContent=k
+    item.className="carte__list--genre"
     list.appendChild(item)
   }
   date=document.createElement("li")
   date.textContent=elem["releaseYear"]
+  date.className="carte__list--date"
   list.appendChild(date)
     
   
@@ -215,20 +227,28 @@ for (let elem of collection) {
   list_icon.className="carte__list_icon"
   let item_icon1=document.createElement("li")
   let item_icon2=document.createElement("li")
+  let item_icon3=document.createElement("li")
   list_icon.appendChild(item_icon1)
   list_icon.appendChild(item_icon2)
+  list_icon.appendChild(item_icon3)
   let link_icon1=document.createElement("a")
   let link_icon2=document.createElement("a")
+  let link_icon3=document.createElement("a")
   link_icon1.href=elem["trailer"]
   link_icon2.href=elem["wiki"]
+  link_icon3.href=elem["critic"]
   item_icon1.appendChild(link_icon1)
   item_icon2.appendChild(link_icon2)
+  item_icon3.appendChild(link_icon3)
   let img_icon1=document.createElement("img")
   let img_icon2=document.createElement("img")
+  let img_icon3=document.createElement("img")
   link_icon1.appendChild(img_icon1)
   link_icon2.appendChild(img_icon2)
+  link_icon3.appendChild(img_icon3)
   img_icon1.src="assets/youtube.png"
   img_icon2.src="assets/wikipedia.png"
+  img_icon3.src="assets/pop-corn.png"
   img_icon2.className="card__list_icon--wiki"
   carte.appendChild(list_icon)
 
