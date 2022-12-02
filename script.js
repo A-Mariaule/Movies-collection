@@ -94,7 +94,7 @@ const collection = [
     name: "Eternal Sunshine of the Spotless Mind",
     director: "	Michel Gondry",
     releaseYear:"2004" ,
-    picture: "assets/Eternal.jpg",
+    picture: "assets/Eternal2.jpg",
     genre: ["Drame","Romance"],
     cast: [
       "Jim Carrey",
@@ -167,7 +167,7 @@ const collection = [
       director: "	Christophe Barratier",
       releaseYear:"2004" ,
       picture: "assets/choriste.jpg",
-      genre: ["Comédie dramatique","musical"],
+      genre: ["Comédie dramatique"],
       cast: [
         "Gérard Jugnot",
         "François Berléand",
@@ -181,15 +181,29 @@ const collection = [
         },
   
   ];
+
+//header
+let head=document.createElement("h1")
+head.textContent="Aurélien's Collection"
+main=document.getElementsByTagName("main")[0]
+container=document.getElementsByClassName("container")[0]
+main.insertBefore(head,container)
+
+
+//boucle 
 i=0
 for (let elem of collection) {
   let carte=document.createElement("div")
   carte.className="carte"
   //image
+  let container_image=document.createElement("div")
+  carte.appendChild(container_image)
+  container_image.className="carte_image"
   let image=document.createElement("img")
   image.className="carte__img"
   image.src=elem["picture"]
-  carte.appendChild(image)
+  container_image.appendChild(image)
+  //carte.appendChild(image)
 
   //genre+date
   let list=document.createElement("ul")
@@ -206,13 +220,18 @@ for (let elem of collection) {
   date.className="carte__list--date"
   list.appendChild(date)
     
-  
 
   //titre
   let titre=document.createElement("h2")
   titre.textContent=elem["name"]
   titre.className="carte__titre"
   carte.appendChild(titre)
+
+  //plot
+  let plot=document.createElement("p")
+  plot.textContent=elem["plot"]
+  plot.className="carte__plot"
+  carte.appendChild(plot)
 
   //auhtor
   let author=document.createElement("h3")
