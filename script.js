@@ -4,7 +4,7 @@ const collection = [
       director: "Ridley Scott",
       releaseYear:"2000" ,
       picture: "assets/gladiator.jpg",
-      genre: ["Péplum","drame"],
+      genre: ["Péplum"],
       cast: [
         "Russell Crowe",
         "Joaquin Phoenix",
@@ -95,7 +95,7 @@ const collection = [
     director: "	Michel Gondry",
     releaseYear:"2004" ,
     picture: "assets/Eternal2.jpg",
-    genre: ["Drame","Romance"],
+    genre: ["Romance"],
     cast: [
       "Jim Carrey",
       "Kate Winslet",
