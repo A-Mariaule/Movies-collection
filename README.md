@@ -11,11 +11,9 @@ All my favorite movies
 
 ## Tech Stack
 
--HTML
-
--CSS/SASS
-
--JS
+- HTML
+- CSS/SASS
+- JS
 
 
 ## Features
